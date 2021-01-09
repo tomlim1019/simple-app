@@ -2,13 +2,12 @@ import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ListItem from './listItem';
 
-const ListComponent = ({ navigation }) => {
-  const navigate = () => {navigation.navigate('Gift')}
+const ListComponent = () => {
   return (
     <View style={styles.list}>
-      <ListItem price={25} navigation={navigate} />
-      <ListItem price={50} navigation={navigate} />
-      <ListItem price={100} navigation={navigate} />
+      <ListItem price={25} />
+      <ListItem price={50} />
+      <ListItem price={100} />
     </View>
   );
 }

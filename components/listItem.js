@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, Image, TouchableNativeFeedback } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const ListComponent = ({ price, navigation }) => {
+const ListComponent = ({ price }) => {
+  const navigation = useNavigation();
+
   return (
     <TouchableNativeFeedback
-      onPress={navigation}
+      onPress={() => navigation.navigate('Gift')}
     >
       <View style={styles.item}>
         <View style={styles.details}>
